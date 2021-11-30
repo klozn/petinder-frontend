@@ -51,6 +51,12 @@ export class ProfileGalleryComponent implements OnInit {
     return this._searchText;
   }
 
+  public deletePet() {
+    this.petService.deleteById(this.selectedPet.id).subscribe(() => this.getPets());
+    console.warn('The pet has been deleted', this.selectedPet);
+    this._selectedPet = undefined;
+  }
+
   onSubmit(): void {
     this.petService.addPet(this.addPetForm.value).subscribe(() => this.getPets());
     console.warn('Your pet has been submitted', this.addPetForm.value);

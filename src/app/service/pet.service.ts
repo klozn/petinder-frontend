@@ -27,4 +27,8 @@ export class PetService {
   findByName(name: string): Observable<any> {
     return this.http.get(this.url + '/' + name);
   }
+
+  deleteById(id: number) {
+    return this.http.delete(this.url + '/' + id);
+  }
 }
