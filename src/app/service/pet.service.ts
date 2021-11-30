@@ -23,4 +23,8 @@ export class PetService {
   addPet(pet: Pet): Observable<any> {
     return this.http.post(this.url, pet);
 }
+
+  findByName(name: string): Observable<any> {
+    return this.http.get(this.url + '/' + name);
+  }
 }

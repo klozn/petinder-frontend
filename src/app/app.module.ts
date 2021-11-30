@@ -8,12 +8,15 @@ import { ProfileGalleryComponent } from './profile-gallery/profile-gallery.compo
 import { HttpClientModule} from "@angular/common/http";
 import { NameFilterPipe } from './pipes/name-filter.pipe';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { SetupDateComponent } from './date/setup-date/setup-date.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileGalleryComponent,
-    NameFilterPipe
+    NameFilterPipe,
+    SetupDateComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     LayoutModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

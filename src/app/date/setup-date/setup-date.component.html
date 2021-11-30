@@ -1,0 +1,23 @@
+<div class="container modalPopup">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="big-dialog">
+        <div class="clearfix">
+          <div class="pull-left dialog-picture">
+            <img class="small-profile-picture" [src]="'https://pettinder.herokuapp.com/'+ pet.image">
+          </div>
+          <h3>{{pet.name}}</h3>
+          <p>{{pet.profileText}}</p>
+        </div>
+        <div class="clearfix">
+          <a class="btn btn-default" [routerLink]="['']">Cancel</a>
+          <form [formGroup]="sendTextForm">
+            <label>Name</label>
+            <input type="text" class="form-control">
+            <button type="submit" class="btn btn-primary pull-right">Let's Play</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
